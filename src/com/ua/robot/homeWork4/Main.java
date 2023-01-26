@@ -7,9 +7,13 @@ public class Main {
         System.out.println(str.toUpperCase());
         System.out.println(str.toLowerCase());
 
-        System.out.println(str.length());
+        //System.out.println(str.length());
         System.out.println(str.charAt(0));
-        System.out.println(str.charAt(10));
+        //System.out.println(str.charAt(10));
+
+        int length = str.length();
+        int lastIndex = length - 1;
+        System.out.println(str.charAt(lastIndex));
 
         // "Test" Перше слово стане велике друге маленьке
         String str2 = str.substring(0, 6);
