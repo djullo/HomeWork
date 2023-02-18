@@ -2,15 +2,19 @@ package com.ua.robot.homeWork12;
 
 public class Human {
 
-    {
-        System.out.println("1) Human block first");
+    static {
+        System.out.println("1) Human block static");
     }
 
     {
-        System.out.println("2) Human block second");
+        System.out.println("3) Human block first");
+    }
+
+    {
+        System.out.println("4) Human block second");
     }
 
     public Human() {
-        System.out.println("3) Human constructor");
+        System.out.println("5) Human constructor");
     }
 }
