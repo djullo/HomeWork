@@ -1,0 +1,44 @@
+use dotsenko;
+
+CREATE table city(
+id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+name varchar(40),
+population int
+);
+insert into city (name, population) value ('Kiev', 28000000)
+insert into city (name, population) value ('Lviv', 721000)
+insert into city (name, population) value ('Harkiv', 1919000)
+insert into city (name, population) value ('Toronto', 2500000)
+insert into city (name, population) value ('Monreal', 1620000)
+
+CREATE table сountry(
+id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+name varchar(40)
+);
+
+alter table city
+add column сountry_id int
+
+alter table city
+ADD FOREIGN KEY (сountry_id) REFERENCES сountry(id)
+
+insert into сountry (name) value ('Ukraine');
+insert into сountry (name) value ('Canada');
+
+update city set сountry_id = 1 where id = 1;
+update city set сountry_id = 1 where id = 2;
+update city set сountry_id = 1 where id = 3;
+update city set сountry_id = 2 where id = 4;
+update city set сountry_id = 2 where id = 5;
+
+select * from city
+select * from сountry
+
+select s.name, s.population, c.name from city s left join сountry c on s.сountry_id = c.id
+
+
+
+
+
+
+
